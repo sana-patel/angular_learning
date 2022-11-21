@@ -1,0 +1,12 @@
+"use strict";
+// import {add,sub} from './calc';
+// console.log(add(2,3));
+// console.log(10,5);
+exports.__esModule = true;
+var calc_1 = require("./calc");
+var objCalc = new calc_1.Calculator();
+console.log(objCalc.add(2, 3));
+console.log(objCalc.sub(10, 5));
+var calc_2 = require("./calc");
+var objCal2 = new calc_2.Calculator2;
+console.log(objCal2.area(3.14, 7));

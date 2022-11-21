@@ -1,10 +1,24 @@
 class calculator {
-    static num1 :number= 10;
-     num2 :number = 20;
-    
-     constructor(num1:number,num2:number){
-        this.num1 = num1
-        this.num2 = num2
-     }
+    add(num1:number,num2:number):number{
+        return num1+num2
+    }
+
+    sub(num1:number,num2:number):number{
+        return num1-num2
+    }
+
+    multiply(num1:number,num2:number):number{
+        return num1*num2
+    }
+
+    div(num1:number,num2:number):number{
+        return num1%num2
+    }
+   public display():void{
+        console.log(calculator.add(20,10),super.sub(20,10),super.multiply(20,10),super.div(20,10));
 }
-console.log(`Addition of two numbers is${num1+num2}`);
+
+}
+
+var obj = new calculator(20,10);
+obj.display()

@@ -1,3 +1,7 @@
+// class Employee {
+//     public firstName: string;
+//     public lastName: string;
+//     public designation: string;
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,73 +17,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Employee = /** @class */ (function () {
-    function Employee() {
+//     public Print(): void {
+//         console.log("Employee details");
+//     }
+// }
+// class Manger extends Employee {
+//     // constructor 
+//     constructor(firstName: string, lastName: string, designation: string) {
+//         // calling parent class constructor.
+//         super();
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.designation = designation;
+//     }
+//     // overriding parent class print method .
+//     public Print(): void {
+//         super.Print()
+//         console.log(`${this.firstName} ${this.lastName} - ${this.designation}`);
+//     }
+// }
+// class Lead extends Employee {
+//     // constructor 
+//     constructor(firstName: string, lastName: string, designation: string) {
+//         // calling parent class constructor.
+//         super();
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.designation = designation;
+//     }
+//     // overriding parent class print method .
+//     public Print(): void {
+//         super.Print()
+//         console.log(`${this.firstName} ${this.lastName} - ${this.designation}`);
+//     }
+// }
+// class Developer extends Employee {
+//     // constructor 
+//     constructor(firstName: string, lastName: string, designation: string) {
+//         // calling parent class constructor.
+//         super();
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.designation = designation;
+//     }
+//     // overriding parent class print method .
+//     public Print(): void {
+//         super.Print()
+//         console.log(`${this.firstName} ${this.lastName} - ${this.designation}`);
+//     }
+// }
+// let employees: Employee[] = new Array(new Manger("Jack", "Sparrow", "Manger"), new Lead("Sumit", "Pande", "Lead"), new Developer("Dnyanesh", "Surya", "Developer"));
+// for(var emp of employees) {
+//     emp.Print();
+// }
+console.log("============Assignment on Polymorphism======================================");
+var Women = /** @class */ (function () {
+    function Women() {
     }
-    Employee.prototype.Print = function () {
-        console.log("Employee details");
+    Women.prototype.print = function () {
+        console.log("Women Details.");
     };
-    return Employee;
+    return Women;
 }());
-var Manger = /** @class */ (function (_super) {
-    __extends(Manger, _super);
-    // constructor 
-    function Manger(firstName, lastName, designation) {
-        var _this = 
-        // calling parent class constructor.
-        _super.call(this) || this;
+var Mother = /** @class */ (function (_super) {
+    __extends(Mother, _super);
+    function Mother(firstName, lastName, role) {
+        var _this = _super.call(this) || this;
         _this.firstName = firstName;
         _this.lastName = lastName;
-        _this.designation = designation;
+        _this.role = role;
         return _this;
     }
-    // overriding parent class print method .
-    Manger.prototype.Print = function () {
-        _super.prototype.Print.call(this);
-        console.log("".concat(this.firstName, " ").concat(this.lastName, " - ").concat(this.designation));
+    Mother.prototype.print = function () {
+        _super.prototype.print.call(this);
+        console.log("".concat(this.firstName, " ").concat(this.lastName, " is a ").concat(this.role, " of two children's."));
     };
-    return Manger;
-}(Employee));
-var Lead = /** @class */ (function (_super) {
-    __extends(Lead, _super);
-    // constructor 
-    function Lead(firstName, lastName, designation) {
-        var _this = 
-        // calling parent class constructor.
-        _super.call(this) || this;
+    return Mother;
+}(Women));
+var daughter = /** @class */ (function (_super) {
+    __extends(daughter, _super);
+    function daughter(firstName, lastName, role) {
+        var _this = _super.call(this) || this;
         _this.firstName = firstName;
         _this.lastName = lastName;
-        _this.designation = designation;
+        _this.role = role;
         return _this;
     }
-    // overriding parent class print method .
-    Lead.prototype.Print = function () {
-        _super.prototype.Print.call(this);
-        console.log("".concat(this.firstName, " ").concat(this.lastName, " - ").concat(this.designation));
+    daughter.prototype.print = function () {
+        _super.prototype.print.call(this);
+        console.log("".concat(this.firstName, " ").concat(this.lastName, " is a ").concat(this.role, " of her parents."));
     };
-    return Lead;
-}(Employee));
-var Developer = /** @class */ (function (_super) {
-    __extends(Developer, _super);
-    // constructor 
-    function Developer(firstName, lastName, designation) {
-        var _this = 
-        // calling parent class constructor.
-        _super.call(this) || this;
+    return daughter;
+}(Women));
+var softwareDeveloper = /** @class */ (function (_super) {
+    __extends(softwareDeveloper, _super);
+    function softwareDeveloper(firstName, lastName, role) {
+        var _this = _super.call(this) || this;
         _this.firstName = firstName;
         _this.lastName = lastName;
-        _this.designation = designation;
+        _this.role = role;
         return _this;
     }
-    // overriding parent class print method .
-    Developer.prototype.Print = function () {
-        _super.prototype.Print.call(this);
-        console.log("".concat(this.firstName, " ").concat(this.lastName, " - ").concat(this.designation));
+    softwareDeveloper.prototype.print = function () {
+        _super.prototype.print.call(this);
+        console.log("".concat(this.firstName, " ").concat(this.lastName, " is a ").concat(this.role, " at Wipro compony ."));
     };
-    return Developer;
-}(Employee));
-var employees = new Array(new Manger("Jack", "Sparrow", "Manger"), new Lead("Sumit", "Pande", "Lead"), new Developer("Dnyanesh", "Surya", "Developer"));
-for (var _i = 0, employees_1 = employees; _i < employees_1.length; _i++) {
-    var emp = employees_1[_i];
-    emp.Print();
+    return softwareDeveloper;
+}(Women));
+var Women1 = new Array(new daughter("Radha", "Patil", "daughter"), new Mother("Radha", "Patil", "Mother"), new softwareDeveloper("Radha", "Patil", "softwareDeveloper"));
+for (var _i = 0, Women1_1 = Women1; _i < Women1_1.length; _i++) {
+    var char = Women1_1[_i];
+    char.print();
 }

@@ -11,7 +11,12 @@ export class Calculator {
    
 }
 
-
+export class Calculator2{
+   static pi = 3.14
+   area(pi,radius:number){
+    return  pi*radius*radius
+   }
+}
 
 
 // function add( x:number,y:number){
