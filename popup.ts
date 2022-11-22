@@ -11,3 +11,4 @@ let average = (m+p+c)/3
 if (average<=70) {
     //return `marks:Average is ${average} and Your Grade is 'C'`
 }
+

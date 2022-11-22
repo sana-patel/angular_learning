@@ -109,3 +109,73 @@ class Girl{
 }
  var objGirls = new Girl("Richa","225cm","37kg","4c",15,true)
   // let girls : Girl[] = new Array(new Girl("Richa patil","225cm","37kg","4c",41 ,true))
+objGirls.display();
+
+
+console.log("***************************************************");
+
+  interface IInfo {
+   id :number;
+   name : string;
+    description?:string;
+    startTime?:any;
+    address?:string;
+    display():void;
+}
+class Organizer1 implements IInfo{
+   id :number;
+   name : string;
+  constructor(id:number,name:string,){
+     this.id = id;
+     this.name = name;
+    
+  }
+  display(){
+   console.log(`ID is ${this.id } ,Name : ${this.name}`);
+   
+  }
+}
+var objOrganizer = new Organizer(123,"Prashant Patil");
+objOrganizer.display();
+class Events2 implements IInfo {
+   id :number;
+   name : string;
+   description:any;
+   startTime:any;
+  constructor(id:number,name:string,description:any,startTime:any){
+     this.id = id;
+     this.name = name;
+     this.description = description;
+     this.startTime = startTime;
+    
+  }
+  display(){
+   console.log(`ID is ${this.id } ,Name : ${this.name},Description:${this.description},Start Time:${this.startTime}`);
+   
+  }
+}
+
+var objEvents = new Events(342,"Rohit sharma"," Annual  day of school","11am");
+objEvents.display();
+
+
+class Venue1 implements IInfo {
+   id :number;
+   name : string;
+   description:any;
+   startTime:any;
+   address : any;
+  constructor(id:number,name:string,description:any,startTime:any,address:any){
+     this.id = id;
+     this.name = name;
+     this.description = description;
+     this.startTime = startTime;
+     this.address = address;
+  }
+  display(){
+   console.log(`ID is ${this.id } ,Name : ${this.name},Description:${this.description}, Start Time:${this.startTime}  venue is:${this.address}`);
+   
+  }
+}
+var objVenue = new Venue(123,"Rohit Patil"," Annual  day of school","10am","Sawitribaiphule multipurpose hall Pune.");
+objVenue.display();
